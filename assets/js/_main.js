@@ -85,6 +85,15 @@ jQuery(document).ready(function($) {
 		    hours   = padNumber(date.getHours(), 2), 
 		    minutes = padNumber(date.getMinutes(), 2);
 
-		$('.event__form__title').html(wdays +' '+days+' '+month+', <span class="event__form__title__number">'+hours+':'+minutes+'</span>');
+		if (date.getDay() < 3  ) {
+			days = + days + 2 - date.getDay();
+			$('.event__form__title').html('Вторник '+days+' '+month+', <span class="event__form__title__number">20:00</span>');
+		} else if (date.getDay() < 5 ) {
+			days = + days + 4 - date.getDay();
+			$('.event__form__title').html('Четверг '+days+' '+month+', <span class="event__form__title__number">19:00</span>');
+		} else {
+			days = + days + 5 - date.getDay();
+			$('.event__form__title').html('Суббота '+days+' '+month+', <span class="event__form__title__number">19:00</span>');
+		}
 	}, 1000);	
 });

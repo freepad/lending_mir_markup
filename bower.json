@@ -1,0 +1,21 @@
+{
+  "name": "markup",
+  "version": "1.0.0",
+  "homepage": "http://",
+  "authors": [
+    "Damir Rysaev <freepad@ya.ru>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.1"
+  }
+}
